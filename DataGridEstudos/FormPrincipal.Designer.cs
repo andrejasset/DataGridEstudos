@@ -65,7 +65,7 @@
             // 
             // btnDeletar
             // 
-            btnDeletar.Location = new Point(713, 405);
+            btnDeletar.Location = new Point(713, 393);
             btnDeletar.Name = "btnDeletar";
             btnDeletar.Size = new Size(75, 23);
             btnDeletar.TabIndex = 4;
