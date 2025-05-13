@@ -31,22 +31,23 @@
             btnAtualizar = new Button();
             btnAdicionar = new Button();
             dataGridView1 = new DataGridView();
-            btnExcluir = new Button();
+            btnDeletar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnAtualizar
             // 
-            btnAtualizar.Location = new Point(568, 326);
+            btnAtualizar.Location = new Point(93, 12);
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(75, 23);
             btnAtualizar.TabIndex = 0;
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += btnAtualizar_Click_1;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(470, 326);
+            btnAdicionar.Location = new Point(12, 12);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(75, 23);
             btnAdicionar.TabIndex = 1;
@@ -57,27 +58,27 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 35);
+            dataGridView1.Location = new Point(12, 41);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(446, 215);
+            dataGridView1.Size = new Size(695, 403);
             dataGridView1.TabIndex = 2;
             // 
-            // btnExcluir
+            // btnDeletar
             // 
-            btnExcluir.Location = new Point(666, 326);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(75, 23);
-            btnExcluir.TabIndex = 3;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
-            btnExcluir.Click += button1_Click;
+            btnDeletar.Location = new Point(713, 405);
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.Size = new Size(75, 23);
+            btnDeletar.TabIndex = 4;
+            btnDeletar.Text = "Excluir";
+            btnDeletar.UseVisualStyleBackColor = true;
+            btnDeletar.Click += btnDeletar_Click;
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnExcluir);
+            Controls.Add(btnDeletar);
             Controls.Add(dataGridView1);
             Controls.Add(btnAdicionar);
             Controls.Add(btnAtualizar);
@@ -93,6 +94,6 @@
         private Button btnAtualizar;
         private Button btnAdicionar;
         private DataGridView dataGridView1;
-        private Button btnExcluir;
+        private Button btnDeletar;
     }
 }

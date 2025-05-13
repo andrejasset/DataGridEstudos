@@ -91,9 +91,73 @@ namespace DataGridEstudos
             CarregarDados();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (dataGridView1.SelectedRows.Count == 0)
+        //        {
+        //            int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id"].Value);
+        //            using (MySqlConnection connection = new MySqlConnection(connectionString))
+        //            {
+        //                connection.Open();
+        //                string query = "DELETE FROM Clientes WHERE id = @id";
+        //                MySqlCommand command = new MySqlCommand(query, connection);
+        //                command.Parameters.AddWithValue("@id", id);
+        //                command.ExecuteNonQuery();
 
+        //            }
+        //            CarregarDados();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Selecione uma linha para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Erro ao excluir cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id"].Value);
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string query = "DELETE FROM Clientes WHERE id = @id";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@id", id);
+                        command.ExecuteNonQuery();
+
+                    }
+                    CarregarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Selecione uma linha para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+            CarregarDados();
         }
     }
 }
+
